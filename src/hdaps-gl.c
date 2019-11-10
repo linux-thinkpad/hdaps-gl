@@ -59,7 +59,7 @@ static int read_position (int *x, int *y)
 	if (fd < 0) {
 		perror ("open");
 		return fd;
-	}	
+	}
 
 	ret = read (fd, buf, BUF_LEN);
 	if (ret < 0) {
@@ -203,7 +203,7 @@ static void update_scene (void)
 	x -= rest_x;
 	y -= rest_y;
 
-	/* only update if we surpass our threshold, to minimize jitter ... */ 
+	/* only update if we surpass our threshold, to minimize jitter ... */
 	if (abs (x - val_x) > UPDATE_THRESHOLD) {
 		val_x = x;
 		do_update = 1;
