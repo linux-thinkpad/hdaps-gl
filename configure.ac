@@ -18,9 +18,9 @@ AC_HEADER_REQUIRE(fcntl.h)
 AC_HEADER_REQUIRE(unistd.h)
 
 # OpenGL headers
-AC_HEADER_REQUIRE(GL/glut.h)
-AC_HEADER_REQUIRE(GL/gl.h)
-AC_HEADER_REQUIRE(GL/glu.h)
+AC_HEADER_REQUIRE(GL/glut.h) # freeglut
+AC_HEADER_REQUIRE(GL/gl.h)   # mesa
+AC_HEADER_REQUIRE(GL/glu.h)  # glu
 
 # Choose three functions more or less at random to look for in our GL
 # libraries. This ensures that these libraries get linked in automatically.
