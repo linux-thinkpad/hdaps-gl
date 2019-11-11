@@ -57,7 +57,14 @@ static int read_position (int *x, int *y)
 
 	fd = open (SYSFS_POSITION_FILE, O_RDONLY);
 	if (fd < 0) {
-		perror ("open");
+		if (errno == ENOENT) {
+			fprintf(stderr,
+				"File " SYSFS_POSITION_FILE " not found. "
+				"Is the HDAPS kernel module loaded?\n");
+		}
+		else {
+			perror ("open (" SYSFS_POSITION_FILE ")");
+		}
 		return fd;
 	}
 
