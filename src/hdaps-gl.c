@@ -40,6 +40,9 @@ static int val_y;
 static int rest_x;
 static int rest_y;
 
+static int fullscreen = 1;
+static int window;
+
 /*
  * read_position - read the (x,y) position pair from hdaps.
  *
@@ -238,6 +241,32 @@ static void update_scene (void)
 	usleep (SLEEP_INTERVAL);
 }
 
+
+static void handle_keyboard (unsigned char key, int x, int y)
+{
+	switch (key)
+	{
+		case 'f': // exit from full screen
+			if (fullscreen == 1) {
+				glutPositionWindow (0,0);
+				glutReshapeWindow (WIDTH, HEIGHT);
+				fullscreen = 0;
+			} else {
+				glutFullScreen ();
+				fullscreen = 1;
+			}
+			break;
+		case 'q': // exit
+			glutDestroyWindow (window);
+			exit (0);
+		case 27: // ESC key - exit
+			glutDestroyWindow (window);
+			exit (0);
+			break;
+		}
+	glutPostRedisplay();
+}
+
 int main (int argc, char *argv[])
 {
 	int ret;
@@ -250,7 +279,11 @@ int main (int argc, char *argv[])
 	glutInitDisplayMode (GLUT_RGBA | GLUT_DOUBLE | GLUT_DEPTH);
 	glutInitWindowSize (WIDTH, HEIGHT);
 	glutInitWindowPosition (0, 0);
-	glutCreateWindow ("IBM Accelerometer Demo");
+	window = glutCreateWindow ("IBM Accelerometer Demo");
+
+	glutFullScreen();
+	glutKeyboardFunc(&handle_keyboard);
+
 	glutDisplayFunc (&update_scene);
 	glutIdleFunc (&update_scene);
 	glutReshapeFunc (&resize_scene);
