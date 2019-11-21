@@ -1,16 +1,18 @@
 /*
  * hdaps-gl.c - GL-based laptop model that rotates in real-time via hdaps
  *
- * This code was created by Jeff Molofee '99.
+ * Copyright (C) 2019, the AUTHORS.
  *
- * And then ported to Linux/GLUT by Richard Campbell '99.
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * version 2 as published by the Free Software Foundation and
+ * distributed as the COPYING file along with this program.
  *
- * This tutrial was combined with Jesper Juhl's ibm_hdaps_userspace.c
- * to rotate the cube according to the laptop position.
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
  *
- * Cube replaced by simple laptop by Petschge <petschge@web.de>.
- *
- * And then updated by Robert Love <rml@novell.com>.
  */
 
 #include <unistd.h>

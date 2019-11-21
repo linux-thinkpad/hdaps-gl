@@ -1,0 +1,21 @@
+This program began as an OpenGL tutorial written by Jeff Molofee
+(support@nehe.me) on the site gamedev.net in 1999:
+
+  https://nehe.gamedev.net/tutorial/lessons_01__05/22004/
+
+That tutorial was ported to Linux/GLUT by Richard Campbell
+(ulmont@bellsouth.net), also in 1999. This example code formed the
+basis of hdaps-gl which, at the time, just displayed a simple OpenGL
+window with a cube in it.
+
+To make the OpenGL window "do something," the tutorial code was
+combined with Jesper Juhl's (jesperjuhl76@gmail.com)
+ibm_hdaps_userspace.c to allow it to determine the laptop's
+orientation and rotate the cube accordingly. The timing of this is
+lost to eternity, or is perhaps buried in the hdaps-devel mailing list
+on SourceForge.
+
+Ultimately, the cube was replaced by a model of a laptop, written by
+Patrick "Petschge" Kilian (petschge@web.de) around 2005. During that
+time, Robert Love (rml@novell.com) served as the project's maintainer
+and was responsible for other code cleanups and improvements.
