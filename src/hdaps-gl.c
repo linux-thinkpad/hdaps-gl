@@ -262,8 +262,7 @@ static void handle_keyboard (unsigned char key, int x, int y)
 		case 27: // ESC key - exit
 			glutDestroyWindow (window);
 			exit (0);
-			break;
-		}
+	}
 	glutPostRedisplay();
 }
 
