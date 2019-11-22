@@ -2,8 +2,7 @@
 ## Building
 
 ``` shell
-autoreconf --install
-autoconf
+autoreconf --force --install
 ./configure
 make
 make install
