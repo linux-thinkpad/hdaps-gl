@@ -1,4 +1,4 @@
-AC_INIT([hdaps-gl], [0.6.0], [michael@orlitzky.com])
+AC_INIT([hdaps-gl], [0.0.7], [michael@orlitzky.com])
 AM_INIT_AUTOMAKE([-Wall foreign no-dist-gzip dist-xz tar-ustar])
 AC_CONFIG_FILES([Makefile src/Makefile])
 AC_CONFIG_SRCDIR([src/hdaps-gl.c])

@@ -1,5 +1,10 @@
 2019-11-21	Michael Orlitzky <michael@orlitzky.com>
 
+	* === Released 0.0.7 ===
+	* Fixes the version number in configure.ac. Whoops!
+
+2019-11-21	Michael Orlitzky <michael@orlitzky.com>
+
 	* === Released 0.0.6 ===
 
 2019-11-21	Robert Jäschke <jaeschke@l3s.de>
